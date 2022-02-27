@@ -17,6 +17,18 @@ body{
   color: #FFF;
 }
 
+input{
+  align-content: center;
+  background-color: #888;
+  width: 102%;
+}
+.comment {
+  width:100%;
+  padding-bottom:64px;
+  background-color: #2F2F2F;
+  color: #999;
+  overflow-wrap: break-word;
+}
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;

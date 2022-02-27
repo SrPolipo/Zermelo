@@ -18,16 +18,36 @@
     <a class="active"  href="naturais.html">Naturais</a>
   </div>
   <h1 align= "center"><mark class = blue>
-    Definindo os naturais:
+    Propriedades de naturais:
   </h1>
-  Seja \(\mathbb{N}\), o conjunto dos números naturais, definido como o conjunto de elementos infinitos assegurado pelo axioma do infinito.
-  <p>Sejam \(0,1,2,...\) representações de elementos de \(\mathbb{N}\) tais que:
-  \begin{gathered}0:= \emptyset; \qquad 1:= 0 \cup \{0\}; \\  \qquad 2:= 1\cup \{1\}; \qquad...\end{gathered}
+  <ol>
+  <li>\[\forall n \in (\mathbb{N}-\emptyset)\Big[\exists m \in \mathbb{N}\big(n =S(m)\big)\Big]\]</li>
+  <li>\[\forall n,m \in \mathbb{N}\Big(n \cup m \in \{n,m\}\Big)\]</li>
+  <li>\[\forall n,m \in \mathbb{N}\Big(n \cap m \in \{n,m\}\Big)\]</li>
+  <ol>
   <hr>
   <h1 align = "center"><mark class = blue>
-    Soma de naturais:
+    Relações e funções com naturais:
   </h1>
-  Define-se a função \(+:\mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}\)
+  <h2><mark class = green>
+    Desigualdades:
+  </h2>
+  Define-se a relação \(\geq\) sobre \(\mathbb{N}\) como o conjunto:
+  \[\Big\{(x,y) \in \mathbb{N} \times \mathbb{N}: (y = x \cap y)\Big\}\]
+  Define-se a relação \(>\) sobre \(\mathbb{N}\) como o conjunto:
+  \[\Big\{(x,y) \in \mathbb{N} \times \mathbb{N}: x\geq y \land x \neq y\Big\}\]
+  Define-se a relação \(\leq\) sobre \(\mathbb{N}\) como o conjunto:
+  \[\Big\{(x,y) \in \mathbb{N} \times \mathbb{N}: y\geq x)\Big\}\]
+  Define-se a relação \(<\) sobre \(\mathbb{N}\) como o conjunto:
+  \[\Big\{(x,y) \in \mathbb{N} \times \mathbb{N}: y>x)\Big\}\]
+  <h2><mark class = green>
+    Máximo:
+  </h2>
+  Define-se o máximo de um subconjunto de naturais como a união de todos os elementos, ou seja:
+  \begin{aligned}
+  max: P(\mathbb{N}) \rightarrow \mathbb{N} \\
+        x \rightarrow \cup x
+  \end{aligned}
 
 
 </body>

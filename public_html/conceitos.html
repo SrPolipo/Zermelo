@@ -22,7 +22,8 @@
   </h1>
   Um conjunto \(X\) diz-se ser unitário se:
   \[\Big(\exists u \in X\Big)\land\Big(\forall u,v \in X\big(u = v\big)\Big)\]
-  Ou seja, em linguagem informal, \(X\) é um conjunto com um único elemento distinto.
+  Ou seja, em linguagem informal, \(X\) é um conjunto com um único elemento distinto.<p>
+  Se um conjunto \(X\) for unitário, então a um elemento \(x \in X\) tal que \(\{x\} = X\) representa-se \(E(X)\)
   <hr>
   <h1 align = "center"><mark class = "blue">
     Operações em conjuntos:
@@ -38,19 +39,43 @@
     \[\big\{z \in X: z \not \in Y\big\}\]
     <hr>
   <h1 align = "center"><mark class = blue>
-    Pares ordenados:
+    Naturais como conjunto:
   </h1>
-  Um conjunto \(P\) diz-se ser um par ordenado se:
+  Para um determinado conjunto \(x\), define-se
+  o sucessor de \(x\), podendo-se representar por \(S(x)\), o conjunto \(x\cup \{x\}\).
+  <p>
+  Define-se o conjunto \(\mathbb{N}\) como sendo o conjunto de elementos infinitos assegurado
+  pelo axioma do infinito, ou seja, é o conjunto que contem o conjunto vazio e o sucessor de qualquer elemento é também elemento
+  do conjunto.
+  <hr>
+
+
+
+
+
+
+
+
+
+  <h1 align = "center"><mark class = blue>
+    Tuplos:
+  </h1>
+  Para um conjunto \(P\) define-se \(D(P)\) como sendo o conjunto:
+  \[\bigg\{n \in \mathbb{N}-\emptyset: \exists x \in P \Big(n \in x\Big)\bigg\}\]
+  Um conjunto \(P\) é um tuplo se:
   <ol>
-    <li>\[\exists x,y \in P\Big(P = \{x,y\}\Big) \]</li>
-    <li>\[\exists x \in P: \Big(\forall u \in P \big(x \subset u\big)\Big)\land \Big(x\text{ é unitário}\Big)\]</li>
-    <li>\[\exists y \in P: \forall u \in P \Big(y = u \lor \big(y-u \text{ é unitário}\big)\Big)\]</li>
+    <li>\[\Big(D(P) \subset \mathbb{N}\Big) \land \Big(D(P) \neq \mathbb{N} - \emptyset\Big)\]</li>
+    <li>\[\forall n \in D(P) \exists m \in D(P) \Big(n = S(m) \lor n = \{\emptyset\}\Big)\]</li>
   </ol>
-  Se um conjunto \(P\) for um par ordenado, então, sejam \(x,y\) os elementos que satisfazem as condições 2. e 3. respetivamente.
-  <p>Define-se a primeira coordenada de \(P\) como sendo um elemento de \(x\).
-  <p>Define-se a segunda coordenada de \(P\) como sendo um elemento de \(y\) se \(y\)
-    for unitário, ou um elemento de \(y-x\) caso contrário.
-  <p>Representa-se um par ordenado \(P\) com primeira e segunda coordenada \(\alpha, \beta\) respetivamente como: \((\alpha, \beta)\).
+  Para um tuplo, define-se \(|P|\) como o conjunto \(n \in D(P)\) que satisfaz \(S(n) \not \in D(P)\).<p>
+  Para um tuplo, define-se \(P(n)\) como sendo o conjunto:
+  \[E\bigg(E\Big(\big\{x \in P: n \in x\big\} - n\Big)\bigg)\]
+  Representa-se um tuplo \(P\) por:
+  \(\Big(P\big(S(\emptyset)\big),..., P\big(|P|\big)\Big)\).<p>
+  A um tuplo \(P\) ao qual existam \(a,b\) tais que \(P = (a,b)\) chama-se par ordenado.
+
+
+
 
 
 
@@ -150,6 +175,17 @@
     Dado uma função \(f: X\rightarrow Y\) é definido \(f^{-1}\) como a relação:
     \[\Big\{(y,x): (x,y) \in f\Big\}\]
     Diz-se que \(f\) admite inversa se \(f^{-1}\) for uma função, que é equivalente a \(f\) ser bijetiva.
+    <hr>
+    <h1 align = "center"><mark class =blue>
+      Permutações:
+    </h1>
+    Para um determinado tuplo \(P\) define-se \(Pe_P\)
+    <ol>
+    <li> \[|P| = |Q|\]
+    <li> \[Val(P) = Val(Q)\]
+    </ol>
+
+    </ol>
     <hr>
     <h1 align= "center"><mark class="blue">
       Isomorfismos:

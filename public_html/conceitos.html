@@ -64,10 +64,10 @@
     Tuplos:
   </h1>
   Para um conjunto \(P\) define-se \(D(P)\) como sendo o conjunto:
-  \[\bigg\{n \in \mathbb{N}-\emptyset: \exists x \in P \Big(n \in x\Big)\bigg\}\]
+  \[\bigg\{n \in \mathbb{N}: \exists x \in P \Big(n \in x\Big)\bigg\}\]
   Um conjunto \(P\) é um tuplo se:
   <ol>
-    <li>\[\Big(D(P) \subset \mathbb{N}\Big) \land \Big(D(P) \neq \mathbb{N} - \emptyset\Big)\]</li>
+    <li>\[\Big(D(P) \subset \mathbb{N} - \emptyset\Big) \land \Big(D(P) \neq \mathbb{N} - \emptyset\Big)\]</li>
     <li>\[\forall n \in D(P) \exists m \in D(P) \Big(n = S(m) \lor n = \{\emptyset\}\Big)\]</li>
     <li>\[\forall x \in P \Big(Unit\big(x - \mathbb{N}\big) \land Unit\big(E(x - \mathbb{N})\big)\Big)\]
   </ol>
@@ -185,11 +185,18 @@
     <h1 align = "center"><mark class =blue>
       Permutações:
     </h1>
-    Para um determinado tuplo \(P\) define-se \(Pe_P\)
-    <ol>
-    <li> \[|P| = |Q|\]
-    <li> \[Val(P) = Val(Q)\]
-    </ol>
+    <h2><mark class = green>
+      Cardinalidade de conjuntos:
+    </h2>
+    Para um determinado conjunto \(P\), para o qual define-se a cardinalidade de \(P\) como sendo:
+    <ul>
+    <li> \(|P|\) se \(|P|\) for um tuplo
+    <li> \(|(x,y,...,z)|\) se \(\{x,y,...,z\} = P\)
+    </ul>
+    Ao qual definirei como ser \(|P|\), sempre que não exista ambiguidade.
+    <h2><mark class = green>
+       de conjuntos:
+    </h2>
 
     </ol>
     <hr>

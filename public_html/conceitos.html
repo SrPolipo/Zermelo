@@ -22,8 +22,11 @@
   </h1>
   Um conjunto \(X\) diz-se ser unitário se:
   \[\Big(\exists u \in X\Big)\land\Big(\forall u,v \in X\big(u = v\big)\Big)\]
+
   Ou seja, em linguagem informal, \(X\) é um conjunto com um único elemento distinto.<p>
-  Se um conjunto \(X\) for unitário, então a um elemento \(x \in X\) tal que \(\{x\} = X\) representa-se \(E(X)\)
+  Se um conjunto \(X\) for unitário, então a um elemento \(x \in X\) tal que \(\{x\} = X\) representa-se \(E(X)\)<p>
+  Define-se \(Unit(X)\) como sendo o valor de verdade da expressão "\(X\) é unitário", ou seja:
+  \[Unit(X) \iff \text{X é unitário}\]
   <hr>
   <h1 align = "center"><mark class = "blue">
     Operações em conjuntos:
@@ -66,6 +69,7 @@
   <ol>
     <li>\[\Big(D(P) \subset \mathbb{N}\Big) \land \Big(D(P) \neq \mathbb{N} - \emptyset\Big)\]</li>
     <li>\[\forall n \in D(P) \exists m \in D(P) \Big(n = S(m) \lor n = \{\emptyset\}\Big)\]</li>
+    <li>\[\forall x \in P \Big(Unit\big(x - \mathbb{N}\big) \land Unit\big(E(x - \mathbb{N})\big)\Big)\]
   </ol>
   Para um tuplo, define-se \(|P|\) como o conjunto \(n \in D(P)\) que satisfaz \(S(n) \not \in D(P)\).<p>
   Para um tuplo, define-se \(P(n)\) como sendo o conjunto:

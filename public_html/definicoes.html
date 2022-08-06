@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rafael Hipólito</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+  </script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Introdução</a>
+    <a class = "active" href="conceitos.html">Conceitos</a>
+    <a href="naturais.html">Naturais</a>
+  </div>
+  <h1 align = "center"><mark class = "blue">
+    Lógica:
+  </h1>
+  Este site utiliza lógica de segunda ordem. Isto pois é extremamente útil poder quantificar relações,
+  por exemplo é impossível definir grupos periodicos utilizando ordem de primeira ordem: <a href = "https://archive.org/details/mathematicallogi1996ebbi/page/50">Consultar.
+</a><p>
+  
+  <hr>
+  <h1 align = "center"><mark class = "blue">
+    Operações em conjuntos:
+  </h1>
+  <h2><mark class = "green"> União de conjuntos:</h2>
+    A união de dois conjuntos \(X,Y\), representada por \(X\cup Y\) é definida como o conjunto:
+    \[\big\{z:(z \in X) \lor (z \in Y) \big\}\]
+  <h2><mark class = "green"> Interseção de conjuntos:</h2>
+    A interseção de dois conjuntos \(X,Y\), representada por \(X\cap Y\) é definida como o conjunto:
+    \[\big\{z:(z \in X) \land (z \in Y) \big\}\]
+  <h2><mark class = "green"> Diferença de conjuntos:</h2>
+    A diferença de dois conjutos \(X,Y\), representada por \(X-Y\) é definida como o conjunto:
+    \[\big\{z \in X: z \not \in Y\big\}\]
+    <hr>
+  <h1 align = "center"><mark class = blue>
+    Naturais como conjunto:
+  </h1>
+  Para um determinado conjunto \(x\), define-se
+  o sucessor de \(x\), podendo-se representar por \(S(x)\), o conjunto \(x\cup \{x\}\).
+  <p>
+  Define-se o conjunto \(\mathbb{N}\) como sendo o conjunto de elementos infinitos assegurado
+  pelo axioma do infinito, ou seja, é o conjunto que contem o conjunto vazio e o sucessor de qualquer elemento é também elemento
+  do conjunto.
+  <hr>
+
+
+
+
+
+
+
+
+
+  <h1 align = "center"><mark class = blue>
+    Tuplos:
+  </h1>
+  Para um conjunto \(P\) define-se \(D(P)\) como sendo o conjunto:
+  \[\bigg\{n \in \mathbb{N}: \exists x \in P \Big(n \in x\Big)\bigg\}\]
+  Um conjunto \(P\) é um tuplo se:
+  <ol>
+    <li>\[\Big(D(P) \subset \mathbb{N} - \emptyset\Big) \land \Big(D(P) \neq \mathbb{N} - \emptyset\Big)\]</li>
+    <li>\[\forall n \in D(P) \exists m \in D(P) \Big(n = S(m) \lor n = \{\emptyset\}\Big)\]</li>
+    <li>\[\forall x \in P \Big(Unit\big(x - \mathbb{N}\big) \land Unit\big(E(x - \mathbb{N})\big)\Big)\]
+  </ol>
+  Para um tuplo, define-se \(|P|\) como o conjunto \(n \in D(P)\) que satisfaz \(S(n) \not \in D(P)\).<p>
+  Para um tuplo, define-se \(P(n)\) como sendo o conjunto:
+  \[E\bigg(E\Big(\big\{x \in P: n \in x\big\} - \{n\}\Big)\bigg)\]
+  Representa-se um tuplo \(P\) por:
+  \(\Big(P\big(S(\emptyset)\big),..., P\big(|P|\big)\Big)\).<p>
+  A um tuplo \(P\) ao qual existam \(a,b\) tais que \(P = (a,b)\) chama-se par ordenado.
+
+
+
+
+
+
+
+
+
+
+  <hr>
+  <h1 align= "center"><mark class="blue">
+    Produto cartesiano:
+  </h1>
+    O produto cartesiano entre dois conjuntos \(X,Y\), representado por \(X \times Y\) é definido como o conjunto:
+    \[\big\{(x,y):x \in X \land y \in Y\big\}\]
+    O produto cartesiano entre vários conjuntos \(X, Y, ... Z\) representado por \(X \times Y \times ... Z\)
+    é definido como o conjunto:
+    \[\big\{(x,y,...,z): x \in X \land y \in Y \land ... \land z \in Z\big\}\]
+  <hr>
+  <h1 align= "center"><mark class="blue">
+    Relações binárias:
+  </h1>
+  <p>
+    Uma relação binária \(R\) de \(X\) para \(Y\) é um subconjunto de \(X \times Y\).
+    <p> Diz-se que \(x\) está em relação com \(y\) por \(R\), e representa-se por \(xRy\) se e só se \((x,y) \in R\)
+    <h2><mark class=green>
+      Relações de equivalência:
+    </h2>
+    Uma relação binária \(R\) de \(X\) para \(Y\) diz-se uma relação de equivalência se:
+    <ol align = left>
+      <li> For reflexiva, ou seja:
+        \[\forall x \in X \Big((x,x) \in R\Big) \]
+      </li><li> For simétrica, ou seja:
+        \[\forall (x,y) \in R \Big((y,x) \in R\Big)\]
+      </li><li> For transitiva, ou seja:
+        \[\forall x,y,z \in X \Big(xRy \land yRz \implies xRz\Big)\]
+    </ol>
+    Por 1. e 2. facilmente sai que para uma relação de equivalência \(R\) de \(X\) para \(Y\)
+    tem-se \(R \subset X \times X\), por isso, pode-se dizer simplesmente que \(R\) é uma relação de equivalência
+    sobre o conjunto \(X\)
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Classes de equivalência:
+    </h1>
+    Para uma dada relação de equivalência \(R\) sobre \(X\), define-se a classe de equivalência de um elemento \(x \in X\), representado por \([x]_R\), como:
+    \[\{y \in X: xRy\}\]
+    <hr>
+    <h1 align = "center"><mark class =blue>
+      Permutações:
+    </h1>
+    <h2><mark class = green>
+      Cardinalidade de conjuntos:
+    </h2>
+    Para um determinado conjunto \(P\), para o qual define-se a cardinalidade de \(P\) como sendo:
+    <ul>
+    <li> \(|P|\) se \(|P|\) for um tuplo
+    <li> \(|(x,y,...,z)|\) se \(\{x,y,...,z\} = P\)
+    </ul>
+    Ao qual definirei como ser \(|P|\), sempre que não exista ambiguidade.
+    <h2><mark class = green>
+      Valores em Tuplos:
+    </h2>
+    Para um determinado tuplo \(P\), define-se o conjunto \(V_P(X)\):
+    \[\Big\{n \in \mathbb{N}: \{n, \{X\}\} \in P\Big\}\]
+    Para um determinado tuplo \(P\), define-se o conjunto \(Dic(P)\), como sendo o conjunto:
+    \[\bigg\{\Big\{V_P(P(n)), \big\{P(n)\big\}\Big\}: n \in D(P)\bigg\}\]
+    <p>
+      Diz-se que X é uma permutação de Y, se o conjunto \(Dic(X) = Dic(Y)\), e representa-se por \(X\sim Y\).
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Espaços Quocientes:
+    </h1>
+    Dada uma relação de equivalência \(R\) sobre \(X\), define-se o espaço quociente de \(X\) por \(R\), representado por \(X/R\), como:
+    \[\Big\{[x]_R: x \in X\Big\}\]
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Funções:
+    </h1>
+    Define-se uma função \(f\), de domínio \(X\) e de conjunto de chegada \(Y\), representado por \(f: X \rightarrow Y\), como uma relação
+    binária \(R\) de \(X\) para \(Y\) com as seguintes propriedades:
+    <ol>
+      <li>\[\forall x \in X \Big(\exists y \in Y: xRy\Big)\]</li>
+      </li><li>\[\forall (x,y),(z,w) \in R \Big(x = z \implies y = w\Big)\]</li>
+    </ol>
+    A cada elemento \((x,y)\) de uma função, designa-se \(x\) como um objeto de \(f\) e \(y\) como imagem de \(x\) por \(f\), ou simplesmente \(f(x)\).
+    Podendo-se representar assim uma função \(f\) arbitrária como:
+    \begin{aligned}
+    f:X &\to Y\\
+    x &\to f(x)
+    \end{aligned}
+    <h2><mark class=green>
+      Contradomínio:
+    </h2>
+    O contradomínio de uma função \(f:X\rightarrow Y\), representado por \(Im(f)\) é definido como o conjunto:
+    \[\Big\{f(x) \in Y: x \in X\Big\}\]
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Funções injetivas, sobrejetivas e bijetivas:
+    </h1>
+    Uma função \(f:X\to Y\) diz-se ser injetiva se:
+    \[\forall u,v \in X \Big(f(u)=f(v)\implies u = v\Big)\]
+    Uma função \(f:X\to Y\) diz-se ser sobrejetiva se:
+    \[Im(f) = Y\]
+    Uma função diz-se ser bijetiva se for injetiva e sobrejetiva.
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Funções inversas:
+    </h1>
+    Dado uma função \(f: X\rightarrow Y\) é definido \(f^{-1}\) como a relação:
+    \[\Big\{(y,x): (x,y) \in f\Big\}\]
+    Diz-se que \(f\) admite inversa se \(f^{-1}\) for uma função, que é equivalente a \(f\) ser bijetiva.
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Operações binárias comutativas e associativas:
+    </h1>
+    <h2><mark class = green>
+      Operações binárias:
+    </h2>
+    Diz-se que uma função \(\cdot:X\rightarrow Y\) é uma operação binária se:
+    \[X = Y\times Y\]
+    Donde se pode representar \(\cdot(x,y), (x,y) \in X\) por \(x\cdot y\) sempre que não exista ambiguidade.
+    <h2><mark class = green>
+      Operações comutativas e associativas:
+    </h2>
+    Diz-se que uma operação \(f: X \rightarrow Y\) é comutativa se:
+    \[\forall x,y \in X \Big(x \sim y \implies f(x) = f(y)\Big)\]
+    Diz-se que uma operação binária \(f: X \rightarrow Y\) é associativa se:
+    \[\forall x,y,z \in Y \Big(f\big(f(x,y),z\big) = f\big(x,f(y,z)\big)\Big)\]
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Grupos:
+    </h1>
+    Define-se um grupo, como sendo um par ordenado \((G,\cdot)\), em que G é um conjunto e \(\cdot\) uma operação binária, que satisfaz as condições:
+    <ol>
+    <li>\[\forall x,y \in G \Big(x\cdot y \in G\Big)\]</li>
+    <li align = center>\(\cdot\) é associativa em \(G\) </li>
+    <li> \[\exists id \in G: \forall x \in G \Big(x \cdot id = x\Big)\]</li>
+    <li> \[\forall x \in G \Big(\exists y \in G \big(x \cdot y = id\big)\Big)\]</li>
+    </ol>
+    <hr>
+    <h1 align= "center"><mark class="blue">
+      Isomorfismos:
+    </h1>
+
+</body>
+</html>

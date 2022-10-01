@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rafael Hipólito</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div class="topnav">
+    <a  href="index.html">Introdução</a>
+    <a  class="active"href="irracionalidade.html">Irracionalidade</a>
+  </div>
+  <h1 align= "center"><mark class = blue>
+    Problema:
+  </h1>
+  <p>
+    Demonstrar a irracionalidade de \(\sqrt 2\) sem utilizar noções de números
+    primos.
+  </p>
+<hr>
+    <h1 align = "center" style="color:#55F">
+      Definições:
+    </h1>
+    Para dois números inteiros \(a,b\) diz-se que \(a\) divide \(b\) e escreve-se \(a\mid b\) se:
+    $$\exists k \in \mathbb Z \;(b = a\cdot k)$$
+    O conjunto de quadrados perfeitos positivos é definido \(S := \{n^2: n \in \mathbb N\}\)
+    <br>
+    <hr>
+    <h1 align = "center" style="color:#55F">
+      Demonstração:
+    </h1>
+    Lema 1: \(\forall n \in \mathbb N \;\;\Bigg[\exists k \in \mathbb N_0 \;\; \exists r \in \{0,1\} \bigg(n = 2k + r\bigg)\Bigg]\)
+    <br><br>
+      Demonstração: Seja \(n\) um natural ao arbítrio, e seja \((u_m)_{m \in \mathbb N _0}\)
+      a sucessão que satisfaz:
+      $$\begin{align*}&u_0 = n \\ &u_m = u_{m-1} - 2 \;\;\forall m \in \mathbb N\end{align*}$$
+      Pela relação de recurrência tem-se que \((u_m)\) é estritamente descrescente.
+    <br>
+      Por indução demonstraria-se facilmente que \((u_m)\) é uma sucessão de inteiros
+      e que tem como forma geral:
+      $$u_m = n - 2m$$
+      Como o conjunto \(\{k \in \mathbb N _0 : k \leq n\}\) tem cardinalidade finita,
+      e \((u_m)\) é estritamente decrescente, com \(u_0 > 0\) sairia facilmente por uma demonstração
+      por absurdo: $$\exists k \in \mathbb N _0 \;\;\Big(u_k \geq 0 > u_{k+1}\Big)$$
+      Donde se tem substituindo pela forma geral:
+      $$2k \leq n \lt 2k + 2$$
+      Como os únicos inteiros no intervalo \(\big[2k,2k+2\big)\) são \(\big\{2k,2k+1\big\}\)
+      tem-se \(n \in \big\{2k,2k+1\big\}\), demonstrando assim o lema pela escolha ter sido arbitrária.
+    <hr color=#f55 style="opacity:0.4">
+    Lema 2: \(2\mid p^2 \implies 2 \mid p \;\;\forall p \in \mathbb N \)
+    <br><br>
+      Demonstração: Suponha com vista ao absurdo \(2 \not \mid p\) e \(2\mid p^2\)
+      para um certo \(p \in \mathbb N\).
+    <br>
+      Pelo lema 1 tem-se que \(p = 2k+1\) para certo \(k \in \mathbb N_0\) (pois
+      \(\forall r \in \mathbb N_0 \;\; 2 \mid 2r \)).
+    <br>
+      Contudo se \(p = 2k+1\) sai \(p^2 = 2(2k^2 + 2k) +1\) o que implica \(2\not \mid p^2\)
+      contradição.
+    <hr color=#f55 style="opacity:0.4">
+    Lema 3: \(\forall q \in \mathbb N \Big(2q^2 \not \in S\Big)\)
+    <br><br>
+    Demonstração: Vamos demonstrar primeiro que a existência de um elemento no conjunto da forma
+    \(2q^2\) implica a existência de outro menor da mesma forma, isto é:
+    $$\forall q \in \mathbb N \Bigg[2q^2 \in S \implies \exists q>k\in\mathbb N \bigg(2k^2 \in S\bigg)\Bigg]$$
+    <br> Seja \(q\) um natural tal que \(2q^2 \in S\), isto é,
+    $$\exists p \in \mathbb N \;\; 2q^2 = p^2$$
+    Sai facilmente por definição que \(2\mid p^2\), pelo que pelo lema 3 se tem: \(2 \mid p\).
+    <br> Ou seja: \(\exists k \in \mathbb N _0 \;\; p = 2k\), como \(p \neq 0\) sai que \(k \in \mathbb N\).
+    <br> Substituindo tem-se:
+    $$q^2 = 2k^2$$
+    Pelo que \(2k^2 \in H\) e como \(k^2 > 0\), facilmente verifica-se \(q > k\),
+    demonstrando assim que a existência de um elemento no conjunto da forma \(2q^2\) implica
+    a existência de outro menor da mesma forma.
+    <br><br>
+    Sairia então por indução que um elemento no conjunto \(H\) da forma \(2q^2\) implicaria
+    a existência de uma infinidade contável de outros menores e distintos,
+    contudo existem apenas \(2q^2\) naturais menores ou iguais a \(2q^2\), o que origina um absurdo,
+    pelo que não existem números dessa forma no conjunto QED.
+    <hr color = #f55 style="opacity:0.4">
+    Finalmente chegamos à parte importante da demonstração.<br>
+    Suponhos que \(\sqrt{2}\) é racional. Como \(\sqrt{2} > 0\) em particular tem-se
+    \(\sqrt{2} \in \mathbb Q ^+\), pelo que pode ser escrito como a razão entre dois naturais.
+    Isto é:
+    $$\exists p, q \in \mathbb N \; \; \left(\sqrt{2} = {p \over q}\right)$$
+    Contudo isto implica que \(2q^2 = p^2\), ou seja \(2q^2 \in H\) que pelo lema 3 é um absurdo.
+    Portanto \(\sqrt{2}\) é irracional QED.
+    <br>
+    <form name="comentários" method="POST" data-netlify="true">
+      <label for="comment"></label><br>
+      <textarea type="text" id="comment" class = "comment" name="comment" value = "Escreve um comentário"></textarea>
+      <input type="submit" value="Submeter" class "submit">
+    </form>
+</body>
+</html>

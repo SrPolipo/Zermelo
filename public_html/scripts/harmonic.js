@@ -1,7 +1,7 @@
 function setup() {
   var canv = createCanvas(windowWidth-20, windowHeight-20);
   background(40,42,53);
-  textSize(width / 10);
+  textSize(width / 15);
   textAlign(CENTER, CENTER);
   noLoop();
 }

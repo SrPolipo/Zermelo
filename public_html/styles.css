@@ -1,13 +1,18 @@
 /* Add a black background color to the top navigation */
 body{
+  background-color: #282A35;
+  color: #DFDFDF;
+}
+.mainContent{
   padding-top:60px;
   background-color: #282A35;
   color: #DFDFDF;
   padding-left: 10vw;
   padding-right: 10vw;
 }
+
 .topnav {
-  z-index: 2;
+  z-index: 10;
   background-color: #202020;
   overflow: hidden;
   position: fixed;
@@ -38,6 +43,7 @@ input{
   text-decoration: none;
   font-size: 1rem;
   color: #DFDFDF;
+  z-index: 5;
 }
 
 /* Change the color of links on hover */

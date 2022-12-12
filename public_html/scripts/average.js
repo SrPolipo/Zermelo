@@ -5,9 +5,9 @@ const size = 35;
 var average = [0,0];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth-20, windowHeight-20);
   background(40,42,53);
-  textSize(width / 10);
+  textSize(width / 15);
   textAlign(CENTER, CENTER);
   noLoop();
 }
@@ -56,14 +56,13 @@ function draw() {
     planetarray[i].vx += (windowWidth/2 - planetarray[i].x)/1000;
     planetarray[i].vy += (windowHeight/2 - planetarray[i].y)/1000}
   
-    
   strokeWeight(4);
   stroke(255);
   fill(122,122,122);
   for(let i = 0; i< planetarray.length; i++){
     planetarray[i].new();
     circle(planetarray[i].x,planetarray[i].y, 40)}
-    /*Calculations for the average point*/
+
   average = [windowWidth/2, windowHeight/2];
   for(let i = 0; i <planetarray.length; i++){
     average[0] += planetarray[i].x - windowWidth/2;

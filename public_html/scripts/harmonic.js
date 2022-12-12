@@ -28,16 +28,16 @@ function draw() {
     text("Carrega em qualquer\n sítio do ecrã", width/2, height/2);
     return;
   }
-
+  strokeWeight(4);
+  stroke(255);
+  fill(122,122,122);
+  
   for(let i = 0; i<planetarray.length; i++){
-    planetarray[i].vx += (xM/(planetarray.length) - planetarray[i].x)/300;
-    planetarray[i].vy += (yM/(planetarray.length) - planetarray[i].y)/300;
+    planetarray[i].vx += (xM - planetarray[i].x)/300;
+    planetarray[i].vy += (yM - planetarray[i].y)/300;
   }
   for(let i = 0; i< planetarray.length; i++){
     planetarray[i].new();
-    strokeWeight(4);
-    stroke(255);
-    fill(122,122,122);
     circle(planetarray[i].x ,planetarray[i].y, 40);
   }
 }
@@ -49,11 +49,8 @@ var yM = 0;
 
 function mousePressed() {
   planetarray.push(new Planet(mouseX,mouseY,0,0));
-  xM = 0;
-  yM = 0;
-  for(let i = 0; i<planetarray.length; i++){
-    xM+= planetarray[i].x;
-    yM+= planetarray[i].y;}
+  xM += (mouseX - xM)/planetarray.length;
+  yM += (mouseY - yM)/planetarray.length;
   loop();
   return false;
 }

@@ -33,7 +33,7 @@ function draw() {
   background(40,42,53);
   if(frameCount === 1){
     fill("white")
-    text("Carrega em qualquer\n sítio do ecrã", width/2, height/2);
+    text("Touch anywhere\n on the screen", width/2, height/2);
     return;
   }
   noFill();

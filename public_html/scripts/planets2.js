@@ -1,9 +1,4 @@
-let dateSlider;
-let displayDate;
-let march18;
-
 function preload() {
-  // Load your JSON data for the full range
   planetData = loadJSON('./data/planet_positions.json');
 }
 
@@ -18,33 +13,30 @@ function draw() {
   background(10);
   translate(width / 2, height / 2);
 
+  let min_distance = Math.min(width,height)
+
   let now = new Date();
   let target = new Date(2026, 2, 18); // March 18
   let diff = target - now; // difference in milliseconds
 
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  let hours = Math.ceil((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
 
   // Display countdown
   fill(255);
   textSize(24);
   textAlign(CENTER, TOP);
-  text(`Time until the 18th of March: ${days}d ${hours}h`, 0, -height/2 + 20);
+  text(`Time until March 18th: ${days}d ${hours}h`, 0, -height/2 + 20);
 
-  // Sun
-  fill(255, 200, 0);
-  noStroke();
-  circle(0, 0, 30);
 
   let radii = {
-    Mercury: 80,
-    Venus: 110,
-    Earth: 140,
-    Mars: 170,
-    Jupiter: 220,
-    Saturn: 260
+    Mercury: min_distance*0.1,
+    Venus: min_distance*0.225,
+    Earth: min_distance*0.25,
+    Mars: min_distance*0.3,
+    Jupiter: min_distance*0.4,
+    Saturn: min_distance*0.45
   };
   
   let colors = {
@@ -66,17 +58,21 @@ function draw() {
   };
 
   let today = new Date();
-  
   let year = today.getFullYear();        
   let month = today.getMonth() + 1;        
-  let day = today.getDate();            
+  let day = today.getDate();
+
   month = month < 10 ? '0' + month : month;
   day = day < 10 ? '0' + day : day;
 
-  // Combine into "year-month-day" format
-  let formattedDate = `${year}-${month}-${day}`;
+  const formattedDate = `${year}-${month}-${day}`;
+  const today_data = planetData[formattedDate];
 
-  const today_data = planetData[formattedDate]
+  // Sun
+  fill(255, 200, 0);
+  noStroke();
+  circle(0, 0, 30);
+
 
   // Planets
   for (let p in today_data) {
